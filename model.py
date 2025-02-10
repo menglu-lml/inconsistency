@@ -128,7 +128,7 @@ class Model(nn.Module):
 
         self.downsample = nn.Conv2d(self.channel_num,self.channel_num // self.divide, 1)
         self.relu3 = nn.LeakyReLU()
-        self.conv3 = nn.Conv2d(self.channel_num// self.divide, self.channel_num// self.divide, (3,1), padding=(1,0))
+        self.conv3 = nn.Conv2d(self.channel_num// self.divide, self.channel_num// self.divide, (5,1), padding=(1,0))
         self.upsample = nn.Conv2d(self.channel_num// self.divide,self.channel_num, 1)
         
         

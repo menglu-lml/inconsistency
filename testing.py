@@ -259,8 +259,6 @@ def evaluate(dataset, model, device, save_path):
             fh.write('{} {}\n'.format(k, cm))
 
     print('Result saved to {}'.format(save_path))
-    gc.collect()
-    torch.cuda.empty_cache()
     return 
 
 
@@ -292,6 +290,7 @@ if __name__ == '__main__':
     label_path = args.protocols_path
 
     is_eval = True
+    # to test ASVSpoof2019 dataset (Full deepfake), add parameter -> track == 'FULL'
     test_set = Dataset(data_path=database_path,label_path=label_path,is_train=False,is_eval=is_eval,transform=transform)
 
 

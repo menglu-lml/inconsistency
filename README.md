@@ -16,5 +16,4 @@ After running the previous testing command, an evaluation output file will be cr
 
 ## Contact
 If you have questions, please contact `menglu.li@torontomu.ca`.
-## Citation
-Comming Soon
+
